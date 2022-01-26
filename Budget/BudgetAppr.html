@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>PSNP</title>
+        <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
+        <meta name="author" content="Pike Web Development - https://www.pikephp.com">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+        <!-- Switchery css -->
+        <link href="../assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+
+        <!-- Bootstrap CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Font Awesome CSS -->
+        <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Custom CSS -->
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <!-- BEGIN CSS for this page -->
+        <style>
+            .parsley-error {
+                border-color: #ff5d48 !important;
+            }
+            .parsley-errors-list.filled {
+                display: block;
+            }
+            .parsley-errors-list {
+                display: none;
+                margin: 0;
+                padding: 0;
+            }
+            .parsley-errors-list > li {
+                font-size: 12px;
+                list-style: none;
+                color: #ff5d48;
+                margin-top: 5px;
+            }
+
+        </style>
+        <!-- END CSS for this page -->
+
+    </head>
+
+    <body class="adminbody">
+
+        <div id="main">
+
+            <!-- top bar navigation -->
+            <div class="headerbar">
+
+                <!-- LOGO -->
+                <div class="headerbar-left">
+
+                    <a href="../index.html" class="logo"><img alt="logo" src="../assets/images/llogo.png" /> </a>
+                </div>
+
+                <nav class="navbar-custom">
+
+                     <ul class="list-inline float-right mb-0">
+					<li class="list-inline-item dropdown notif">
+					<div id="cdateTime"></div>
+					</li>
+						
+						<!--<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-question-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <div class="dropdown-item noti-title">
+                                    <h5><small>Help and Support</small></h5>
+                                </div>
+                                <a target="_blank" href="https://www.pikeadmin.com" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Do you face any trouble on the system</b>
+                                        <span>Contact Us</span>
+                                    </p>
+                                </a>
+                                <a title="Clcik to visit Help and Support Team" target="_blank" href="https://www.pikeadmin.com" class="dropdown-item notify-item notify-all">
+                                    <i class="fa fa-link"></i> Call on Customer Service
+                                </a>
+
+                            </div>
+                        </li>-->
+						
+
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-cog bigfonts"></i><span class=""></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="text-overflow"><small>Language Setting</small> </h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-dot-circle-o bigfonts"></i> <span>English</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-dot-circle-o bigfonts"></i> <span>Amharic</span>
+                                </a>
+
+                                <!-- item-->
+
+
+                            </div>
+                        </li>
+
+
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="../assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="text-overflow"><small>Hello, admin</small> </h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-user"></i> <span>Profile</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-power-off"></i> <span>Logout</span>
+                                </a>
+
+                                <!-- item-->
+                                <a target="_blank" href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-external-link"></i> <span>Transparency</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left">
+                                <i class="fa fa-fw fa-bars"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+            <!-- End Navigation -->
+            <!-- Left Sidebar -->
+            <div class="left main-sidebar">
+	
+                <div class="sidebar-inner leftscroll">
+        
+                    <div id="sidebar-menu">
+                
+                        <ul class="">
+        
+                            <li class="submenu">
+                                <a class="" href="../index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                            </li>
+        
+        
+        
+                            <li class="submenu">
+                                <a href="#"><i class="fa fa-cogs bigfonts"></i> <span> Maintainance </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="../maintainance-psnp.html">Configure PSNP</a></li>
+                                    <li><a href="../maintainance-region.html">Configure Region</a></li>
+                                    <li><a href="../maintainance-zone.html">Configure Zone</a></li>
+                                    <li><a href="../maintainance-woreda.html">Configure Woreda</a></li>
+                                    <li><a href="../maintainance-kebele.html">Configure Kebele</a></li>
+                                    <li><a href="../maintainance-community.html">Configure Community</a></li>
+                                    <li><a href="../maintainance-targeting-woreda.html">Configure Target Woredas</a></li>
+                                    <li><a href="../maintainance-martial-status.html">Configure Marital Status</a></li>
+                                    <li><a href="../configure-activities.html">Configure Activities</a></li>
+                                    <li><a href="../maintainance-transfer-type.html">Configure Transfer Type</a></li>
+                                    <li><a href="../maintainance-tds-type.html">Configure Tds Type</a></li>
+                                    <li><a href="../maintainance-attendance-type.html">Configure Attendance Type</a></li>
+                                    <li><a href="../maintainance-designation.html">Configure Designation</a></li>
+                                    <li><a href="../maintainance-wealth-ranking.html">Configure Wealth Ranking</a></li>
+                                    <!-- <li><a href="maintainance-woreda-client.html">Configure Clients for Woreda</a></li> -->
+                                    <li><a href="../maintainance-health-status.html">Configure Health Status</a></li>
+                                    <li><a href="../maintainance-maternal-condition.html">Configure Maternal cond.</a></li>
+                                    <li><a href="../maintainance-land-measurement.html">Configure Land Measeurment</a></li>
+                                    <li><a href="../maintainance-land-status.html">Configure Land Status</a></li>
+                                    <li><a href="../maintainance-livestokes.html">Configure Livestokes</a></li>
+                                    <li><a href="../maintainance-relationship.html">Configure Relationship Types</a></li>
+                                    <li><a href="../configure-project.html">Configure Project</a></li>
+                                    <li><a href="../configure-sub-project.html">Configure Sub-project</a></li>
+                                    <li><a href="../configure-units.html">Configure Units</a></li>
+                                    <li><a href="#">Configure worknorms</a></li>
+                                    <li><a href="../configure-quaters.html">Configure Quaters</a></li>
+                                    <li><a href="../configure-activities.html">Configure Activities</a></li>
+                                     
+                                </ul>
+                            </li>
+        
+                            <li class="submenu">
+                                        <a href="#"><i class="fa fa-id-card bigfonts"></i> <span> HH Registration </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="../registration/location.html">Register</a></li>
+                                            <li><a href="../registration/HH_View_Location.html">HH View</a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                
+                                <li class="submenu">
+                                        <a href="#"><i class="fa fa-file-o bigfonts"></i> <span> Targeting </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                        <li><a href="../targeting/configure-targetcriteria.html">Configure Target Crieteria</a></li>
+                                        <li><a href="../targeting/view-targetcriteria.html">View Target With Crieteria</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                    <a href="#"><i class="fa fa-book bigfonts"></i> <span> Enrollment </span> <span class="menu-arrow"></span></a>
+                                    <ul class="list-unstyled">
+                                        <li><a href="../enrollment/location.html">Verify</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            <li class="submenu">
+                                        <a href="#"><i class="fa fa-flash bigfonts"></i> <span> Planning </span> <span class="menu-arrow"></span></a>
+                                       <ul class="list-unstyled">
+                                            <li><a href="../Planning/pw-activities-planing.html">PW Activities Planning</a></li>
+                                            <li><a href="../Planning/sub-project-budget-planing.html">Sub-Project Budget Planning</a></li>
+                                            <li><a href="../Planning/config-woreda-client.html">Configure Clients for Woreda</a></li>
+                                            <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+                                        </ul>
+                                    </li>
+                                      <li class="submenu">
+                                        <a href="#"><i class="fa fa-eercast bigfonts"></i> <span> Public Work </span> <span class="menu-arrow"></span></a>
+                                       <ul class="list-unstyled">
+                                           <li><a href="../PublicWork/configure-pwteam.html">Configure PW Team</a></li>
+                                           <li><a href="../PublicWork/Pw-Schedule.html">PW Schedule</a></li>
+                                           <li><a href="../PublicWork/Configurewage-Rate.html">Configure Wage Rate</a></li>
+                                           <li><a href="../PublicWork/PWExemptaion.html">PW Exemption</a></li>
+                                            <li><a href="../PublicWork/TDSExemptaion.html">TDS Exemption</a></li>
+                                             <li><a href="../PublicWork/STDSadd.html">TDS Social Service Linkage</a></li>
+                                           <li><a href="../PublicWork/Attendance.html">Attendance</a></li>
+                                             
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="submenu">
+                                        <a href="#" class=""><i class="fa fa-object-group" aria-hidden="true"></i> <span> PDS </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                            <li><a href="../pds/location.html">PDS Enrollment</a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <li class="submenu active">
+                                        <a href="#" class="subdrop"><i class="fa fa-usd bigfonts" aria-hidden="true"></i> <span> Budget </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled" style="display:block;">
+                                         <li ><a href="BudgetType.html">Configure Budget </a></li>
+                                            <li ><a href="budgetCeiling.html">Budget Component</a></li>
+                                            <li ><a href="BLocation.html">Budget Planning</a></li>
+                                            <li class="active"><a href="BudgetAppr.html">Budget Approval</a></li>
+                                            <li ><a href="Cashflow.html">Cashflow Forcasting</a></li>
+                                            <li ><a href="location.html">Budget Reconcilation</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="#" class=""><i class="fa fa-paypal bigfonts" aria-hidden="true"></i> <span>Payment & Payroll</span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled" >
+                                            <li><a href="../payroll/PWLocation.html">PW Payroll</a></li>
+                                            <li><a href="../payroll/PDSLocation.html">PDS Payroll</a></li>
+                                             
+                                             <li class=""><a href="../payroll/LHPayroll-location.html">LH Payroll</a></li>
+                                               <li class=""><a href="../payroll/LHPayrollLocationRpt.html">Report</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="#" class=""><i class="fa fa-credit-card bigfonts" aria-hidden="true"></i> <span>GRM</span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                            <li class=""><a href="../GRM/ConfigureKAC.html">Configure KAC</a></li>
+                                            <li><a href="../GRM/CCLocation.html">Configure Complaints</a></li>
+                                             <li><a href="../GRM/RegisterKAC.html">Register Member</a></li>
+                                             <li class=""><a href="../GRM/grmauthority.html">Configure GRM Authority</a></li>
+                                              <li class=""><a href="../GRM/POLocation.html">Configure Position of Member</a></li>
+                                                <li class=""><a href="../GRM/GRVLocation.html">Grievance Registration</a></li>
+                                               <li class=""><a href="../GRM/GRV-Location.html">Grievance Resolution</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="#" class=""><i class="fa fa-rocket bigfonts" aria-hidden="true"></i> <span>Livelihood</span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                        <li><a href="../Livelihood/LH_Configure_Pathway_Add.html">Configure Pathway</a></li>
+                                        <li><a href="../Livelihood/LH_Transfer_View.html">View LH Transfer</a></li>
+                                         <li><a href="../Livelihood/LH_Planning_Location.html">LH Planning</a></li>
+                                         <li><a href="../Livelihood/LH_Pathway_Location.html">LH Activities</a></li>
+                                         <li><a href="../Livelihood/location.html">LH Prioritization</a></li>
+                                          <li><a href="../Livelihood/lh-location.html">Approve LH</a></li>
+                                         <li><a href="../Livelihood/lh-implementation.html">LH Implementation</a></li>
+                                        
+                                        
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                       
+                                        <a href="#" class=""><i class="fa fa-chain bigfonts" aria-hidden="true"></i> <span>M&E</span> <span class="menu-arrow"></span></a>
+                                 <ul class="list-unstyled" >
+										<li><a href="../ME/configure-indicatoradd.html">Configure Indicators</a></li>
+										<li><a href="../ME/report.html">Report</a></li>
+									</ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="#" class=""><i class="fa fa-users bigfonts" aria-hidden="true"></i> <span>User Account</span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="submenu">
+                                        <a href="#" class=""><i class="fa fa-pie-chart bigfonts" aria-hidden="true"></i> <span>Reports</span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                    
+        
+                        </ul>
+        
+                    <div class="clearfix"></div>
+        
+                    </div>
+                
+                    <div class="clearfix"></div>
+        
+                </div>
+        
+            </div>
+	<!-- End Sidebar -->
+
+            <div class="content-page">
+
+                <!-- Start content -->
+                <div class="content">
+
+                    <div class="container-fluid">
+
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="breadcrumb-holder">
+                                    <h1 class="main-title float-left">Budget Configuration</h1>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item">Budget Management</li>
+                                      <li class="breadcrumb-item ">Budget Configuration</li>
+										<li class="breadcrumb-item active">Location</li>
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tab-custom">
+								<div class="row">
+									<div class="col-sm-9">
+										  <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="Alocation.html">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="BudgetA.html">Aprove Budget</a>
+                                </li>
+                                
+                              
+                                
+                            </ul>
+									</div>
+									<div class="col-sm-3">
+										<span class="mandatory"> * indicates mandatory </span>
+									</div>
+								</div>
+                            
+                          
+                                    <div class="card mb-3">
+                                <div class="card-body">
+                                    
+                                    <span class="select-txt">Select Location</span>
+                                    <div class="location-div">
+                                    <ul id="tree1">
+                                        <li><a href="#">Ethiopia</a>
+                                            <ul>
+                                                <li><a href="#">Oromia</a>
+                                                    <ul>
+                                                        <li><a href="#">Bale Zone</a><ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Borena Zone
+                                                    <ul>
+                                                        <li><a href="#">Abaya</a></li>
+                                                        <li><a href="#">Avero</a></li>
+                                                        <li><a href="#">Duga Dawa</a>
+                                                            <ul>
+                                                                <li><a href="#">Kebele 01</a></li>
+                                                                <li><a href="#">Kebele 02</a>
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community 01</a></li>
+                                                                        <li><a href="general-info.html">Community 02</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                    </ul>
+                                                    
+                                                </li>
+                                                
+                                                
+                                                <li>Afar
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Somali
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Amhara
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>SNNP
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Benishangul - Gumuz
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Gambela
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Harari
+                                            <ul>
+                                                <li>Regional
+                                                    <ul>
+                                                        <li>Woreda
+                                                            <ul>
+                                                                <li>Kebele
+                                                                    <ul>
+                                                                        <li><a href="general-info.html">Community</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                            </ul>
+                                        </li>
+                                        
+                                    </ul>
+                                    </div>
+                                    <div class="clearfix"></div>   
+                                </div>
+                                    </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END container-fluid -->
+            </div>
+            <!-- END content -->
+        </div>
+        <!-- END content-page -->
+
+        <footer class="footer">
+            <span class="text-right">
+                Copyright <a target="_blank" href="#">Africom</a>
+            </span>
+            <span class="float-right">
+                Powered by <a target="_blank" href="https://www.pikeadmin.com"><b>Africom Technologies PLC</b></a>
+            </span>
+        </footer>
+
+    </div>
+    <!-- END main -->
+
+    <script src="../assets/js/modernizr.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+    <script src="../assets/js/detect.js"></script>
+    <script src="../assets/js/fastclick.js"></script>
+    <script src="../assets/js/jquery.blockUI.js"></script>
+    <script src="../assets/js/jquery.nicescroll.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+    <script src="../assets/plugins/switchery/switchery.min.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/pikeadmin.js"></script>
+
+    <!-- BEGIN Java Script for this page -->
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+    <script>
+    // START CODE FOR BASIC DATA TABLE 
+        $(document).ready(function () {
+            $('#example1').DataTable();
+            $.fn.extend({
+                treed: function (o) {
+
+                    var openedClass = 'fa fa-minus';
+                    var closedClass = 'fa fa-plus';
+
+                    if (typeof o != 'undefined') {
+                        if (typeof o.openedClass != 'undefined') {
+                            openedClass = o.openedClass;
+                        }
+                        if (typeof o.closedClass != 'undefined') {
+                            closedClass = o.closedClass;
+                        }
+                    }
+                    ;
+
+                    //initialize each of the top levels
+                    var tree = $(this);
+                    tree.addClass("tree");
+                    tree.find('li').has("ul").each(function () {
+                        var branch = $(this); //li with children ul
+                        branch.prepend("<i class='indicator glyphicon " + closedClass + "'></i>");
+                        branch.addClass('branch');
+                        branch.on('click', function (e) {
+                            if (this == e.target) {
+                                var icon = $(this).children('i:first');
+                                icon.toggleClass(openedClass + " " + closedClass);
+                                $(this).children().children().toggle();
+                            }
+                        })
+                        branch.children().children().toggle();
+                    });
+                    //fire event from the dynamically added icon
+                    tree.find('.branch .indicator').each(function () {
+                        $(this).on('click', function () {
+                            $(this).closest('li').click();
+                        });
+                    });
+                    //fire event to open branch if the li contains an anchor instead of text
+                    tree.find('.branch>a').each(function () {
+                        $(this).on('click', function (e) {
+                            $(this).closest('li').click();
+                            e.preventDefault();
+                        });
+                    });
+                    //fire event to open branch if the li contains a button instead of text
+                    tree.find('.branch>button').each(function () {
+                        $(this).on('click', function (e) {
+                            $(this).closest('li').click();
+                            e.preventDefault();
+                        });
+                    });
+                }
+            });
+
+    //Initialization of treeviews
+
+            $('#tree1').treed();
+
+            $('#tree2').treed({openedClass: 'glyphicon-folder-open', closedClass: 'glyphicon-folder-close'});
+
+            $('#tree3').treed({openedClass: 'glyphicon-chevron-right', closedClass: 'glyphicon-chevron-down'});
+
+        });
+    // END CODE FOR BASIC DATA TABLE 
+
+
+    // START CODE FOR Child rows (show extra / detailed information) DATA TABLE 
+        function format(d) {
+            // `d` is the original data object for the row
+            return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                    '<tr>' +
+                    '<td>Full name:</td>' +
+                    '<td>' + d.name + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td>Extension number:</td>' +
+                    '<td>' + d.extn + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '<td>Extra info:</td>' +
+                    '<td>And any further details here (images etc)...</td>' +
+                    '</tr>' +
+                    '</table>';
+        }
+
+        // $(document).ready(function() {
+        // 	var table = $('#example2').DataTable( {
+        // 		"ajax": "assets/data/HealthStatusobject.txt",
+        // 		"columns": [
+        // 			{
+        // 				"className":      'details-control',
+        // 				"orderable":      false,
+        // 				"data":           null,
+        // 				"defaultContent": ''
+        // 			},
+        // 			{ "data": "HealthStatus(Eng)" },
+        // 			{ "data": "HealthStatus(Amh)" }
+        // 		],
+        // 		"order": [[1, 'asc']]
+        // 	} );
+
+        // 	// Add event listener for opening and closing details
+        // 	$('#example2 tbody').on('click', 'td.details-control', function () {
+        // 		var tr = $(this).closest('tr');
+        // 		var row = table.row( tr );
+
+        // 		if ( row.child.isShown() ) {
+        // 			// This row is already open - close it
+        // 			row.child.hide();
+        // 			tr.removeClass('shown');
+        // 		}
+        // 		else {
+        // 			// Open this row
+        // 			row.child( format(row.data()) ).show();
+        // 			tr.addClass('shown');
+        // 		}
+        // 	} );
+        // } );
+        // // END CODE FOR Child rows (show extra / detailed information) DATA TABLE 		
+
+
+
+        // // START CODE Show / hide columns dynamically DATA TABLE 		
+        // $(document).ready(function() {
+        // 	var table = $('#example3').DataTable( {
+        // 		"scrollY": "350px",
+        // 		"paging": false
+        // 	} );
+
+        // 	$('a.toggle-vis').on( 'click', function (e) {
+        // 		e.preventDefault();
+
+        // 		// Get the column API object
+        // 		var column = table.column( $(this).attr('data-column') );
+
+        // 		// Toggle the visibility
+        // 		column.visible( ! column.visible() );
+        // 	} );
+        // } );
+        // // END CODE Show / hide columns dynamically DATA TABLE 	
+
+
+        // // START CODE Individual column searching (text inputs) DATA TABLE 		
+        // $(document).ready(function() {
+        // 	// Setup - add a text input to each footer cell
+        // 	$('#example4 thead th').each( function () {
+        // 		var title = $(this).text();
+        // 		$(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+        // 	} );
+
+        // 	// DataTable
+        // 	var table = $('#example4').DataTable();
+
+        // Apply the search
+        table.columns().every(function () {
+            var that = this;
+
+            $('input', this.header()).on('keyup change', function () {
+                if (that.search() !== this.value) {
+                    that
+                            .search(this.value)
+                            .draw();
+                }
+            });
+        });
+
+        // END CODE Individual column searching (text inputs) DATA TABLE 	
+
+    </script>	
+	<script>
+		var currentdate = new Date(); 
+		var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		var month = ["January", "February", "March", "April", "May", "June", "July","August","September","October","November","December"];
+		
+		var hours = currentdate.getHours();
+  var minutes = currentdate.getMinutes();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;	
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  
+  
+		var datetime =  strTime +", "
+				  +	weekday[currentdate.getDay()] + ", "
+				 + month[currentdate.getMonth()] + " "
+				 +	currentdate.getDate() + ", "
+                //+ (currentdate.getMonth()+1)  + "/" 
+				+ currentdate.getFullYear() + " "
+				
+                //+ currentdate.getFullYear() + " </br> "  
+               // + currentdate.getHours() + ":"  
+               // + currentdate.getMinutes() + " " 
+               // + currentdate.getSeconds();
+		document.getElementById("cdateTime").innerHTML = datetime;
+		</script>
+						
+    <!-- END Java Script for this page -->
+
+</body>
+</html>

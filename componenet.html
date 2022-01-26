@@ -1,0 +1,192 @@
+
+
+<!-- select -->
+<div class="form-group row">
+ <label class="col-sm-2 col-form-label">Type of Pathway<span class="text-danger">*</span>
+ </label>
+ <select class="form-control col-sm-4 select2">
+  <option selected="selected">...Pathway...</option>
+  <option>New</option>
+  <option>Continuation</option>
+ </select>
+</div>
+
+<!-- input -->
+<div class="form-group row">
+ <label for="Description" class="col-sm-2 col-form-label">Pathway Name<span class="text-danger">*</span>
+ </label>
+ <input type="text" class="form-control col-sm-4" placeholder="Pathway Name">
+</div>
+
+<!-- textarea -->
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+<!-- checkbox -->
+<div class="form-group row">
+ <label for="Designation" class="col-sm-4 ">Is G/Father a Live<span
+         class="text-danger">*</span></label>
+ <div class="col-sm-8 p-0">
+     <div class="">
+         <input type="checkbox" class="form-control" id="">
+     </div>
+ </div>
+</div>
+
+<!-- Btn -->
+<div class="form-group row">
+ <div class="col-sm-12">
+  <input type="submit" value="Submit" class="btn btn-primary">
+  <input type="submit" value="Cancel" class="btn btn-secondary">
+</div>
+</div>
+
+<!-- datepicker -->
+<div class="row form-group">
+ <label for="date1" class="col-sm-2 col-form-label">Date of Registered
+    <span class="text-danger">*</span></label>
+ <div class="col-sm-4 p-0">
+     <div class="custom-date input-group m-b-10 date datepicker">
+         <input type="text" class="form-control" placeholder="select Date" id="datepicker">
+         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+     </div>
+
+ </div>
+</div>
+
+<script>
+ $('#datepicker').datepicker({
+     uiLibrary: 'bootstrap'
+   });
+ </script>
+
+ <!-- viwe table -->
+ <div class="row">
+  <div class="col-md-12">
+      <div class="card overflow-hidden">
+          <div class="card-header">
+              <h3 class="card-title">View List</h3>
+              </div>
+        <div class="card-body">
+             <div class="row form-group mt-5">
+           <div class="col-sm-12">
+               <div class="table-responsive">
+                   <table class="table table-bordered">
+                       <tbody>
+                           <tr>
+                               <th width="30px">Sl#</th>
+                               <th>Location</th>
+                               <th>Specal Area Name</th>
+                               <th>Date of Registration</th>
+                               <th>Action</th>
+                           </tr>
+                           <tr>
+                               <td>1</td>
+                               <td>Addis Ababa</td>
+                               <td>Gola sefer</td>
+                               <td>20-10-2020</td>
+                               <td><a href="#" class="btn btn-primary btn-sm" data-toggle="modal"
+                                       data-target="#modal_edit_slide_2"><i class="fa fa-pencil"
+                                           aria-hidden="true"></i></a>
+                                   <a href="javascript:deleteRecord_2('2');"
+                                       class="btn btn-danger btn-sm" data-placement="top"
+                                       data-toggle="tooltip" data-title="Delete"><i
+                                           class="fa fa-trash-o" aria-hidden="true"></i></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>2</td>
+                               <td>Addis Ababa</td>
+                               <td>Sefer selam</td>
+                               <td>10-10-20</td>
+                               <td><a href="#" class="btn btn-primary btn-sm" data-toggle="modal"
+                                       data-target="#modal_edit_slide_2"><i class="fa fa-pencil"
+                                           aria-hidden="true"></i></a>
+                                   <a href="javascript:deleteRecord_2('2');"
+                                       class="btn btn-danger btn-sm" data-placement="top"
+                                       data-toggle="tooltip" data-title="Delete"><i
+                                           class="fa fa-trash-o" aria-hidden="true"></i></a>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+       </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+
+   <!-- Modal -->
+   <div class="modal fade" id="modal_Approve_date" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Approval Date</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="form-group">
+                <div class="m-5">
+                    <div class="custom-date input-group m-b-10 date datepicker">
+                        <input type="text" class="form-control" placeholder="select Date" id="datepicker">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+               </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- Tab -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card overflow-hidden">
+            <div class="card-header">
+                <h3 class="card-title">Default Tabs</h3>
+            </div>
+            <div class="card-body">
+                <div class="myTab">
+                    <ul class="nav  nav-tabs m-0" id="myTab" role="tablist">
+                        <li class="nav-item ">
+                            <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="true">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content  p-3 border" id="myTabContent">
+                        <div class="tab-pane fade p-0" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        </div>
+                        <div class="tab-pane fade p-0" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+                        </div>
+                        <div class="tab-pane fade p-0 active show" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
